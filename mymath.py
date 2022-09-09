@@ -1,14 +1,13 @@
-
-from math import factorial
-
-
 class mymath:
     def __init__(self, num1, num2):
         self.num1 = num1
         self.num2 = num2
-        self.factorial = factorial
+        
     def add(self):
         return (f"Answer {self.num1} + {self.num2} = {self.num1 + self.num2}")
+    
+    def minus(self):
+        return (f"Answer {self.num1} - {self.num2} = {self.num1 - self.num2}")
     
     def minus(self):
         return (f"Answer {self.num1} - {self.num2} = {self.num1 - self.num2}")
@@ -16,13 +15,13 @@ class mymath:
     def probability2(self):
         return (f"Probability is : {self.num1 * self.num2}")
     
-    def factorial(n):
-        if (n == 0):
+    def factorials(self):
+        if (self.num1 == 0):
             return 0
-        elif (n == 1):
+        elif (self.num1 == 1):
             return 1
         else:
-            return self.factorial(n - 1) + self.factorial(n - 2)
+            return self.factorials(self.num1 - 1) * self.factorials(self.num1 - 2)
         
         
 def main():
