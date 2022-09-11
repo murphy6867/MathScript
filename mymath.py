@@ -25,14 +25,19 @@ class mymath:
             return 1
         else:
             return self.fibo(num1 - 1) + self.fibo(num1 - 2)
-        
-        
+    
+    def fac(self, num1):
+        fact = 1
+        for i in range(1, num1+1):
+            fact = fact * i
+        return fact
+    
 def main():
     #x = float(input("Enter num 1 : "))
     #y = float(input("Enter num 2 : "))
     
-    #a = mymath()
-    print(mymath.add(7, 7))
+    a = mymath()
+    print(a.fac(5))
     
 if __name__ == "__main__":
     main()
